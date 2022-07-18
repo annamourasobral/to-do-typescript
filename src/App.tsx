@@ -3,7 +3,7 @@ import "./App.css";
 import InputField from "./components/InputField";
 import TodoList from "./components/TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { Todo } from "./model";
+import { Todo } from "./models/models";
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -66,7 +66,7 @@ const App: React.FC = () => {
         <TodoList
           todos={todos}
           setTodos={setTodos}
-          completedTodos={CompletedTodos}
+          CompletedTodos={CompletedTodos}
           setCompletedTodos={setCompletedTodos}
         />
       </div>
